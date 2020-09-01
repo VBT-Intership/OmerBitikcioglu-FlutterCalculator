@@ -137,10 +137,7 @@ class _MyHomePageState extends State<MyHomePage> {
             Expanded(
               child: Divider(),
             ),
-            Visibility(
-              visible: true,
-              child: buildTypingArea(operation, operationStyle),
-            ),
+            buildTypingArea(operation, operationStyle),
             buildButtons()
           ],
         )));
