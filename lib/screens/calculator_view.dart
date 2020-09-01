@@ -27,6 +27,7 @@ class _MyHomePageState extends State<MyHomePage> {
   final resultStyle = TextStyle(fontSize: 48.0, fontWeight: FontWeight.bold);
   final operationStyle = TextStyle(
       fontSize: 24.0, fontWeight: FontWeight.bold, color: Colors.black26);
+  final buttonStyle = TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold);
 
   buttonPressed(String buttonText) {
     if (buttonText == "CLEAR") {
@@ -78,7 +79,7 @@ class _MyHomePageState extends State<MyHomePage> {
         padding: EdgeInsets.all(24.0),
         child: Text(
           buttonText,
-          style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
+          style: buttonStyle,
         ),
         onPressed: () => buttonPressed(buttonText),
       ),
@@ -91,8 +92,6 @@ class _MyHomePageState extends State<MyHomePage> {
         padding: EdgeInsets.symmetric(vertical: 24.0, horizontal: 12.0),
         child: Text(text, style: textStyle));
   }
-
-  Container buildResultArea() => Container();
 
   Column buildButtons() {
     return Column(children: [
